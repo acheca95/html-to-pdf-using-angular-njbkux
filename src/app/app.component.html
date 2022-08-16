@@ -1,0 +1,50 @@
+<div>
+	<input type="button" value="CPTURE" (click)="captureScreen()"/>
+    </div>
+	<table id="contentToConvert">
+		<tr>
+			<th>Column1</th>
+			<th>Column2</th>
+			<th>Column3</th>
+		</tr>
+		<tr>
+			<td>Row 1</td>
+			<td>Row 1</td>
+			<td>Row 1</td>
+		</tr>
+		<tr>
+			<td>Row 2</td>
+			<td>Row 2</td>
+			<td>Row 2</td>
+		</tr>
+		<tr>
+			<td>Row 3</td>
+			<td>Row 3</td>
+			<td>Row 3</td>
+		</tr>
+		<tr>
+			<td>Row 4</td>
+			<td>Row 4</td>
+			<td>Row 4</td>
+		</tr>
+		<tr>
+			<td>Row 5</td>
+			<td>Row 5</td>
+			<td>Row 5</td>
+		</tr>
+		<tr>
+			<td>Row 6</td>
+			<td>Row 6</td>
+			<td>Row 6</td>
+		</tr>
+	</table>
+	<h1> Select a PDF File </h1>
+
+<input style="display: none" type="file" (change)="onFileSelect($event)" #hiddenfileinput>
+
+<button (click)="hiddenfileinput.click()"  class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>Select PDF</button>
+<hr>
+<img id="avatarURL" [src]="avatarURL" height="200" *ngIf="avatarURL">
+<input #file type="file" accept='image/*' [hidden]="true" (change)="changeAvatar(file.files)"/>
+<i class="btn material-icons" (mousedown)="file.click();">camera_alt</i>
+`
